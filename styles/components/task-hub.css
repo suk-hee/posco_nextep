@@ -89,9 +89,9 @@
           mask: var(--icon) no-repeat center / contain;
 }
 
-.action-icon[data-icon="search"] .action-icon__icon { --icon: url('/assets/icons/IconSearch.svg'); }
-.action-icon[data-icon="filter"] .action-icon__icon { --icon: url('/assets/icons/BiFilterAlt.svg'); }
-.action-icon[data-icon="more"]   .action-icon__icon { --icon: url('/assets/icons/ico-more-ver.svg'); }
+.action-icon[data-icon="search"] .action-icon__icon { --icon: url('../../assets/icons/IconSearch.svg'); }
+.action-icon[data-icon="filter"] .action-icon__icon { --icon: url('../../assets/icons/BiFilterAlt.svg'); }
+.action-icon[data-icon="more"]   .action-icon__icon { --icon: url('../../assets/icons/ico-more-ver.svg'); }
 
 /* ==========================================================================
    Task Register (새 Task 등록 section)
@@ -136,8 +136,8 @@
   width: 24px;
   height: 24px;
   background-color: #FFFFFF;
-  -webkit-mask: url('/assets/icons/BiPlus.svg') no-repeat center / contain;
-          mask: url('/assets/icons/BiPlus.svg') no-repeat center / contain;
+  -webkit-mask: url('../../assets/icons/BiPlus.svg') no-repeat center / contain;
+          mask: url('../../assets/icons/BiPlus.svg') no-repeat center / contain;
 }
 
 /* ==========================================================================

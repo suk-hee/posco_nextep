@@ -8,7 +8,7 @@
  * Note:
  *   - Each line is a separate `+=` assignment so developers can insert
  *     if / for logic between lines when customizing.
- *   - Asset paths (../assets/...) are resolved relative to the consuming HTML file.
+ *   - Asset paths (./assets/...) are resolved relative to the consuming HTML file.
  *     This constant assumes the HTML is at the project root. Adjust paths if used elsewhere.
  *   - Sidebar interactions require loading components/layout/sidebar.js AFTER the HTML is injected.
  */
@@ -18,7 +18,7 @@ SIDEBAR_HTML += `<aside class="side-bar" aria-label="주요 메뉴">`;
 SIDEBAR_HTML +=   `<div class="side-bar__top">`;
 SIDEBAR_HTML +=     `<div class="side-bar__logo">`;
 SIDEBAR_HTML +=       `<a href="/index.html" aria-label="홈으로 이동">`;
-SIDEBAR_HTML +=         `<img src="../assets/icons/logo-default.svg" alt="Logo" width="48" height="48">`;
+SIDEBAR_HTML +=         `<img src="./assets/icons/logo-default.svg" alt="Logo" width="48" height="48">`;
 SIDEBAR_HTML +=       `</a>`;
 SIDEBAR_HTML +=     `</div>`;
 SIDEBAR_HTML +=     `<nav class="side-bar__menu" aria-label="메인 내비게이션">`;
@@ -75,7 +75,7 @@ SIDEBAR_HTML +=       `</button>`;
 SIDEBAR_HTML +=     `</div>`;
 SIDEBAR_HTML +=     `<div class="side-bar__profile" role="button" tabindex="0" aria-label="내 프로필">`;
 SIDEBAR_HTML +=       `<span class="side-bar__profile-image">`;
-SIDEBAR_HTML +=         `<img src="../assets/avatar/female01.jpg" alt="프로필 이미지">`;
+SIDEBAR_HTML +=         `<img src="./assets/avatar/female01.jpg" alt="프로필 이미지">`;
 SIDEBAR_HTML +=       `</span>`;
 SIDEBAR_HTML +=     `</div>`;
 SIDEBAR_HTML +=   `</div>`;
