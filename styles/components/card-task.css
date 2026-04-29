@@ -1,0 +1,439 @@
+/* ==========================================================================
+   CardTask (default style)
+   Options (data-*):
+     data-complete           off | on
+     data-show-datebar       true | false
+     data-show-actionbar     true | false
+     data-show-ai-icon       true | false
+     data-show-startdate     true | false
+     data-show-enddate       true | false
+     data-show-update        true | false
+     data-show-share         true | false
+     data-show-startbutton   true | false
+     data-show-endbutton     true | false
+     data-summary-lines      double | single
+   ========================================================================== */
+
+.card-task {
+  box-sizing: border-box;
+  width: 100%;
+  background: #FFFFFF;
+  border-bottom: 1px solid #D3D6E3;
+}
+
+.card-task__block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+/* ---------- TaskInfo (Title + Summary) ---------- */
+
+.card-task__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-task__title-row {
+  display: flex;
+  align-items: center;
+}
+
+.card-task__check {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card-task__check-box {
+  box-sizing: border-box;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #9398A8;
+  border-radius: 1000px;
+  background: #FFFFFF;
+  position: relative;
+}
+
+.card-task__title {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 150%;
+  color: #3B4154;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-task__delete {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.card-task__delete-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-mask: url('/assets/icons/IconX.svg') no-repeat center / contain;
+          mask: url('/assets/icons/IconX.svg') no-repeat center / contain;
+}
+
+.card-task__summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.card-task__ai-icon {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 24px;
+  height: 21px;
+}
+
+.card-task__ai-icon::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url('/assets/icons/IconAI-2Star-Color.svg') no-repeat center / contain;
+}
+
+.card-task__summary-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  color: #686F86;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---------- DateBar ---------- */
+
+.card-task__datebar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 24px;
+}
+
+.card-task__dates {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-task__date {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 150%;
+  color: #959BB0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-task__update {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.card-task__update-dot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 1000px;
+  background: #F22625;
+}
+
+.card-task__update-text {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 150%;
+  color: #3B4154;
+  white-space: nowrap;
+}
+
+/* ---------- ActionBar ---------- */
+
+.card-task__actionbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.card-task__share {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px 4px 4px;
+  border: 1px solid #C4C8D7;
+  border-radius: 1000px;
+  background: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.card-task__share-avatar {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 1000px;
+  object-fit: cover;
+}
+
+.card-task__share-count {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  color: #3B4154;
+}
+
+.card-task__btn {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 56px;
+  height: 32px;
+  padding: 0 14px 0 10px;
+  border: 1px solid #959BB0;
+  border-radius: 1000px;
+  background: #FFFFFF;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 125%;
+  color: #343B52;
+}
+
+.card-task__btn-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #343B52;
+  -webkit-mask: url('/assets/icons/BiCog.svg') no-repeat center / contain;
+          mask: url('/assets/icons/BiCog.svg') no-repeat center / contain;
+}
+
+/* ---------- Option toggles ---------- */
+
+.card-task[data-show-datebar="false"]     .card-task__datebar     { display: none; }
+.card-task[data-show-actionbar="false"]   .card-task__actionbar   { display: none; }
+.card-task[data-show-ai-icon="false"]     .card-task__ai-icon     { display: none; }
+.card-task[data-show-startdate="false"]   .card-task__date--start { display: none; }
+.card-task[data-show-enddate="false"]     .card-task__date--end   { display: none; }
+.card-task[data-show-update="false"]      .card-task__update      { display: none; }
+.card-task[data-show-share="false"]       .card-task__share       { display: none; }
+.card-task[data-show-startbutton="false"] .card-task__btn--start  { display: none; }
+.card-task[data-show-endbutton="false"]   .card-task__btn--end    { display: none; }
+
+.card-task[data-summary-lines="single"] .card-task__summary-text { -webkit-line-clamp: 1; }
+
+/* ---------- Hover & Active state (per style, not completed) ---------- */
+
+.card-task:not([data-style]):not([data-complete="on"]):hover,
+.card-task:not([data-style]):not([data-complete="on"])[aria-current="true"],
+.card-task[data-style="default"]:not([data-complete="on"]):hover,
+.card-task[data-style="default"]:not([data-complete="on"])[aria-current="true"] {
+  background: rgba(224, 227, 236, 0.5);
+}
+
+.card-task[data-style="success"]:not([data-complete="on"]):hover,
+.card-task[data-style="success"]:not([data-complete="on"])[aria-current="true"] {
+  background: rgba(215, 228, 255, 0.5);
+}
+
+.card-task[data-style="accent"]:not([data-complete="on"]):hover,
+.card-task[data-style="accent"]:not([data-complete="on"])[aria-current="true"] {
+  background: rgba(222, 242, 213, 0.5);
+}
+
+.card-task[data-style="warning"]:not([data-complete="on"]):hover,
+.card-task[data-style="warning"]:not([data-complete="on"])[aria-current="true"] {
+  background: rgba(255, 230, 206, 0.5);
+}
+
+.card-task[data-style="danger"]:not([data-complete="on"]):hover,
+.card-task[data-style="danger"]:not([data-complete="on"])[aria-current="true"] {
+  background: rgba(255, 210, 204, 0.5);
+}
+
+/* ---------- Dragging state (per style) ---------- */
+
+.card-task[data-state="dragging"] {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
+.card-task:not([data-style])[data-state="dragging"],
+.card-task[data-style="default"][data-state="dragging"] {
+  background: rgba(224, 227, 236, 0.5);
+  border: 1px solid #959BB0;
+}
+
+.card-task[data-style="success"][data-state="dragging"] {
+  background: rgba(215, 228, 255, 0.5);
+  border: 1px solid #2C72F9;
+}
+
+.card-task[data-style="accent"][data-state="dragging"] {
+  background: rgba(222, 242, 213, 0.5);
+  border: 1px solid #60B919;
+}
+
+.card-task[data-style="warning"][data-state="dragging"] {
+  background: rgba(255, 230, 206, 0.5);
+  border: 1px solid #FF8400;
+}
+
+.card-task[data-style="danger"][data-state="dragging"] {
+  background: rgba(255, 210, 204, 0.5);
+  border: 1px solid #F22625;
+}
+
+/* ---------- Style: Success ---------- */
+
+.card-task[data-style="success"] .card-task__title {
+  color: #2C72F9;
+}
+
+.card-task[data-style="success"] .card-task__check-box {
+  border-color: #2C72F9;
+}
+
+/* ---------- Style: Accent ---------- */
+
+.card-task[data-style="accent"] .card-task__title {
+  color: #53A215;
+}
+
+.card-task[data-style="accent"] .card-task__check-box {
+  border-color: #60B919;
+}
+
+/* ---------- Style: Warning ---------- */
+
+.card-task[data-style="warning"] .card-task__title {
+  color: #F06418;
+}
+
+.card-task[data-style="warning"] .card-task__check-box {
+  border-color: #FF8400;
+}
+
+/* ---------- Style: Danger ---------- */
+
+.card-task[data-style="danger"] .card-task__title {
+  color: #F22625;
+}
+
+.card-task[data-style="danger"] .card-task__check-box {
+  border-color: #F22625;
+}
+
+/* ---------- Complete state ---------- */
+
+.card-task[data-complete="on"] {
+  background: #EEEEEE;
+}
+
+.card-task[data-complete="on"] .card-task__title {
+  color: #7D7D7D;
+  text-decoration: line-through;
+}
+
+/* Filled check (uses each style's border color as fill) */
+.card-task[data-complete="on"] .card-task__check-box {
+  background: #9398A8;
+  border-color: #9398A8;
+}
+
+.card-task[data-style="success"][data-complete="on"] .card-task__check-box {
+  background: #2C72F9;
+  border-color: #2C72F9;
+}
+
+.card-task[data-style="accent"][data-complete="on"] .card-task__check-box {
+  background: #60B919;
+  border-color: #60B919;
+}
+
+.card-task[data-style="warning"][data-complete="on"] .card-task__check-box {
+  background: #FF8400;
+  border-color: #FF8400;
+}
+
+.card-task[data-style="danger"][data-complete="on"] .card-task__check-box {
+  background: #F22625;
+  border-color: #F22625;
+}
+
+.card-task[data-complete="on"] .card-task__check-box::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 8px;
+  border: solid #FFFFFF;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -60%) rotate(45deg);
+}
+
+/* Share badge → disabled look */
+.card-task[data-complete="on"] .card-task__share {
+  background: #DDDDDD;
+  border-color: #B9B9B9;
+}
+
+.card-task[data-complete="on"] .card-task__share-count {
+  color: #7D7D7D;
+}
+
+/* Action buttons → disabled look */
+.card-task[data-complete="on"] .card-task__btn {
+  background: #DDDDDD;
+  border-color: #C2C2C2;
+  color: #7D7D7D;
+}
+
+.card-task[data-complete="on"] .card-task__btn-icon {
+  background-color: #7D7D7D;
+}

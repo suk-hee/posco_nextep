@@ -1,0 +1,547 @@
+/* ==========================================================================
+   Task Editor Component
+   ========================================================================== */
+
+
+.task-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ---------- Divider ---------- */
+
+.task-editor__divider {
+  width: 100%;
+  height: 1px;
+  background: #E3E6F1;
+}
+
+/* ---------- Header ---------- */
+
+.task-editor__header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Title */
+
+.task-editor__title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.task-editor__title-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  margin-top: 8px;
+}
+
+.task-editor__title {
+  flex: 1 1 auto;
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.5em;
+  color: #242837;
+}
+
+/* Meta */
+
+.task-editor__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 4px;
+}
+
+.task-editor__meta-row {
+  display: flex;
+  align-items: center;
+}
+
+/* Meta Label */
+
+.task-editor__meta-label {
+  flex-shrink: 0;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.task-editor__meta-label-icon {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.task-editor__meta-label-icon span {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #3B4154;
+  -webkit-mask: var(--icon) no-repeat center / contain;
+          mask: var(--icon) no-repeat center / contain;
+}
+
+.task-editor__meta-label-text {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5em;
+  color: #3B4154;
+}
+
+/* Meta Value — Date Range */
+
+.task-editor__date-range {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.task-editor__date-value {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #9398A8;
+}
+
+.task-editor__date-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #9398A8;
+  -webkit-mask: var(--icon) no-repeat center / contain;
+          mask: var(--icon) no-repeat center / contain;
+}
+
+.task-editor__date-sep {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #9398A8;
+}
+
+/* Meta Value — Content area (badges etc) */
+
+.task-editor__meta-value {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Badge */
+
+.task-editor__badge {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  height: 24px;
+  padding: 0 10px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.25em;
+  text-align: center;
+  white-space: nowrap;
+  border: 0;
+}
+
+.task-editor__badge--accent {
+  background: #60B919;
+  color: #FFFFFF;
+}
+
+.task-editor__badge--thirdly {
+  background: #E3E6F1;
+  color: #242837;
+}
+
+.task-editor__badge--thirdly-icon {
+  background: #E3E6F1;
+  color: #242837;
+  padding: 0 8px 0 10px;
+}
+
+.task-editor__badge-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: rgba(36, 40, 55, 0.4);
+  -webkit-mask: var(--icon) no-repeat center / contain;
+          mask: var(--icon) no-repeat center / contain;
+}
+
+/* Share badges list */
+
+.task-editor__share-list {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Add button (+ circle) */
+
+.task-editor__add-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #9398A8;
+  border-radius: 1000px;
+  background: #FFFFFF;
+}
+
+.task-editor__add-btn-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: rgba(36, 40, 55, 0.4);
+  -webkit-mask: url('../../assets/icons/BiPlus.svg') no-repeat center / contain;
+          mask: url('../../assets/icons/BiPlus.svg') no-repeat center / contain;
+}
+
+/* ---------- Content ---------- */
+
+.task-editor__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  background: #EBEDFF;
+  border-radius: 20px;
+}
+
+/* Card List */
+
+.task-editor__card-list {
+  display: flex;
+  gap: 12px;
+}
+
+.task-editor__card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  background: #FFFFFF;
+  border: 1px solid #D5D8E4;
+  border-radius: 10px;
+}
+
+.task-editor__card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.task-editor__card-avatar {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #5C70E6;
+  border-radius: 50%;
+}
+
+.task-editor__card-avatar-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: #FFFFFF;
+  -webkit-mask: url('../../assets/icons/BiEnvelope.svg') no-repeat center / contain;
+          mask: url('../../assets/icons/BiEnvelope.svg') no-repeat center / contain;
+}
+
+.task-editor__card-more {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.task-editor__card-more-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #A6AABA;
+  -webkit-mask: url('../../assets/icons/ico-more-hoz.svg') no-repeat center / contain;
+          mask: url('../../assets/icons/ico-more-hoz.svg') no-repeat center / contain;
+}
+
+.task-editor__card-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5em;
+  color: #3B4154;
+}
+
+.task-editor__card-date {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.25em;
+  color: #696E80;
+}
+
+.task-editor__card-desc {
+  display: flex;
+  gap: 4px;
+}
+
+.task-editor__card-desc-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.task-editor__card-desc-text {
+  flex: 1;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #808596;
+}
+
+/* AI Suggestion */
+
+.task-editor__ai-suggest {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-editor__ai-suggest-heading {
+  display: flex;
+  gap: 8px;
+}
+
+.task-editor__ai-suggest-icon {
+  flex-shrink: 0;
+  height: 24px;
+}
+
+.task-editor__ai-suggest-title {
+  flex: 1;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5em;
+  color: #242837;
+}
+
+.task-editor__ai-suggest-list {
+  margin: 0;
+  padding: 0 0 0 1.2em;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #333333;
+}
+
+/* ---------- Editor Body ---------- */
+
+.task-editor__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-editor__body-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5em;
+  color: #9398A8;
+}
+
+.task-editor__body-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.task-editor__body-item {
+  display: flex;
+  align-items: center;
+}
+
+.task-editor__body-bullet {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+}
+
+.task-editor__body-bullet::after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #9398A8;
+}
+
+.task-editor__body-item-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #9398A8;
+  padding-left: 4px;
+}
+
+/* ---------- File Blocks ---------- */
+
+.task-editor__files {
+  display: flex;
+  gap: 16px;
+}
+
+.task-editor__file {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background: #FFFFFF;
+  border: 1px solid #D5D8E4;
+  border-radius: 12px;
+}
+
+.task-editor__file-name {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  padding-right: 10px;
+}
+
+.task-editor__file-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.task-editor__file-name-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25em;
+  color: #3B4154;
+  text-decoration: underline;
+}
+
+.task-editor__file-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  height: 20px;
+}
+
+.task-editor__file-size {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.25em;
+  color: #808596;
+}
+
+.task-editor__file-more {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #A6AABA;
+  -webkit-mask: url('../../assets/icons/ico-more-hoz.svg') no-repeat center / contain;
+          mask: url('../../assets/icons/ico-more-hoz.svg') no-repeat center / contain;
+}
+
+/* ---------- Callout ---------- */
+
+.task-editor__callout {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #EDEFF5;
+  border-radius: 8px;
+}
+
+.task-editor__callout-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.task-editor__callout-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #808596;
+}
+
+/* ---------- Table ---------- */
+
+.task-editor__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.task-editor__table-th,
+.task-editor__table-td {
+  padding: 8px;
+  border: 1px solid #D5D8E4;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #3B4154;
+  vertical-align: middle;
+}
+
+.task-editor__table-th {
+  background: #EDEFF5;
+  font-weight: 600;
+  text-align: center;
+}
+
+.task-editor__table-th--number {
+  width: 56px;
+}
+
+.task-editor__table-td {
+  background: #FFFFFF;
+  font-weight: 400;
+  text-align: left;
+}
+
+.task-editor__table-td--center {
+  text-align: center;
+}
+
+/* Table hover/active 상태 */
+.task-editor__table tbody tr:hover .task-editor__table-td {
+  background: #E3E6F1;
+}
+

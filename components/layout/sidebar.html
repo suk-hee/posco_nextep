@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>SideBar</title>
+<link rel="stylesheet" href="../../styles/layout.css">
+</head>
+<body>
+<aside class="side-bar" aria-label="주요 메뉴">
+  <div class="side-bar__top">
+    <div class="side-bar__logo">
+      <a href="../../index.html" aria-label="홈으로 이동">
+        <img src="../../assets/icons/logo-default.svg" alt="Logo" width="48" height="48">
+      </a>
+    </div>
+    <nav class="side-bar__menu" aria-label="메인 내비게이션">
+      <button type="button" class="side-bar__item" data-menu="to-do">
+        <span class="side-bar__item-icon"></span>
+        <span class="side-bar__item-label">To-Do</span>
+      </button>
+      <button type="button" class="side-bar__item" data-menu="mail">
+        <span class="side-bar__item-icon"></span>
+        <span class="side-bar__item-label">메일</span>
+      </button>
+      <button type="button" class="side-bar__item" data-menu="ecm">
+        <span class="side-bar__item-icon"></span>
+        <span class="side-bar__item-label">ECM</span>
+      </button>
+      <button type="button" class="side-bar__item" data-menu="schedule">
+        <span class="side-bar__item-icon"></span>
+        <span class="side-bar__item-label">일정</span>
+      </button>
+      <button type="button" class="side-bar__item" data-menu="sign">
+        <span class="side-bar__item-icon"></span>
+        <span class="side-bar__item-label">결재</span>
+      </button>
+      <button type="button" class="side-bar__item" data-menu="people">
+        <span class="side-bar__item-icon"></span>
+        <span class="side-bar__item-label">사람찾기</span>
+      </button>
+      <button type="button" class="side-bar__item" data-menu="gpt">
+        <span class="side-bar__item-icon"></span>
+        <span class="side-bar__item-label">P-GPT</span>
+      </button>
+      <button type="button" class="side-bar__item" data-menu="app">
+        <span class="side-bar__item-icon"></span>
+        <span class="side-bar__item-label">App</span>
+      </button>
+      <button type="button" class="side-bar__item" data-menu="search">
+        <span class="side-bar__item-icon"></span>
+        <span class="side-bar__item-label">검색</span>
+      </button>
+      <button type="button" class="side-bar__item" data-menu="more">
+        <span class="side-bar__item-icon"></span>
+        <span class="side-bar__item-label">더보기</span>
+      </button>
+    </nav>
+  </div>
+  <div class="side-bar__bottom">
+    <div class="side-bar__actions">
+      <button type="button" class="side-bar__action" data-action="help" aria-label="도움말">
+        <span class="side-bar__action-icon"></span>
+      </button>
+      <button type="button" class="side-bar__action" data-action="setting" aria-label="설정">
+        <span class="side-bar__action-icon"></span>
+      </button>
+    </div>
+    <div class="side-bar__profile" role="button" tabindex="0" aria-label="내 프로필">
+      <span class="side-bar__profile-image">
+        <img src="../../assets/avatar/female01.jpg" alt="프로필 이미지">
+      </span>
+    </div>
+  </div>
+</aside>
+<script src="sidebar.js"></script>
+</body>
+</html>

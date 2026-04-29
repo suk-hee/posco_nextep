@@ -1,0 +1,14 @@
+/* ==========================================================================
+   Base — 전역 리셋 / 폰트
+   ========================================================================== */
+
+@import '../fonts/pretendard-gov.css';
+
+body {
+  margin: 0;
+  font-family: 'Pretendard GOV', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Layout</title>
+<link rel="stylesheet" href="../../styles/base.css">
+<link rel="stylesheet" href="../../styles/layout.css">
+</head>
+<body>
+<div class="layout">
+  <div id="lnb"></div>
+  <aside class="layout__left-panel"></aside>
+  <div class="layout__contents layout__contents--bg-white"></div>
+  <aside class="layout__right-panel"></aside>
+</div>
+<script src="../components.js"></script>
+<script>
+  document.getElementById('lnb').innerHTML = SIDEBAR_HTML;
+</script>
+<script src="./sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>CardTask — Default</title>
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/components/card-task.css">
+<style>
+  body { padding: 24px; background: #F5F6F9; }
+  .demo-list { max-width: 400px; background: #FFFFFF;}
+  .demo-caption { margin: 24px 0 8px; font: 600 14px/1.5 'Pretendard GOV', sans-serif; color: #3B4154; }
+</style>
+</head>
+<body>
+
+<p class="demo-caption">1) Default — 모든 옵션 ON</p>
+<div class="demo-list">
+  <div class="card-task"
+    data-complete="off"
+    data-show-datebar="true"
+    data-show-actionbar="true"
+    data-show-ai-icon="true"
+    data-show-startdate="true"
+    data-show-enddate="true"
+    data-show-update="true"
+    data-show-share="true"
+    data-show-startbutton="true"
+    data-show-endbutton="true"
+    data-summary-lines="double">
+    <div class="card-task__block">
+      <div class="card-task__info">
+        <div class="card-task__title-row">
+          <button class="card-task__check" type="button" aria-label="완료 체크">
+            <span class="card-task__check-box"></span>
+          </button>
+          <span class="card-task__title">할 일 제목입니다. (1줄 이상일 경우 말줄임표 사용)</span>
+          <button class="card-task__delete" type="button" aria-label="삭제">
+            <span class="card-task__delete-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="card-task__summary">
+          <span class="card-task__ai-icon" aria-hidden="true"></span>
+          <p class="card-task__summary-text">AI 요약 설명 또는 직접 입력한 내용입니다. 2줄 이상일 경우 말줄임표를 사용합니다.</p>
+        </div>
+      </div>
+      <div class="card-task__datebar">
+        <div class="card-task__dates">
+          <span class="card-task__date card-task__date--start">생성일 2026.01.02</span>
+          <span class="card-task__date card-task__date--end">마감일 2026.01.02</span>
+        </div>
+        <div class="card-task__update">
+          <span class="card-task__update-dot" aria-hidden="true"></span>
+          <span class="card-task__update-text">1분 전</span>
+        </div>
+      </div>
+      <div class="card-task__actionbar">
+        <div class="card-task__share">
+          <img class="card-task__share-avatar" src="/assets/avatar/female01.jpg" alt="">
+          <span class="card-task__share-count">+20</span>
+        </div>
+        <button class="card-task__btn card-task__btn--start" type="button">
+          <span class="card-task__btn-icon" aria-hidden="true"></span>
+          <span>MD버튼라벨</span>
+        </button>
+        <button class="card-task__btn card-task__btn--end" type="button">
+          <span class="card-task__btn-icon" aria-hidden="true"></span>
+          <span>MD버튼라벨</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="demo-caption">2) Success 스타일 (제목/체크 테두리 파란색)</p>
+<div class="demo-list">
+  <div class="card-task"
+    data-style="success"
+    data-complete="off"
+    data-show-datebar="true"
+    data-show-actionbar="true"
+    data-show-ai-icon="true"
+    data-show-startdate="true"
+    data-show-enddate="true"
+    data-show-update="true"
+    data-show-share="true"
+    data-show-startbutton="true"
+    data-show-endbutton="true">
+    <div class="card-task__block">
+      <div class="card-task__info">
+        <div class="card-task__title-row">
+          <button class="card-task__check" type="button" aria-label="완료 체크">
+            <span class="card-task__check-box"></span>
+          </button>
+          <span class="card-task__title">할 일 제목입니다. (1줄 이상일 경우 말줄임표 사용)</span>
+          <button class="card-task__delete" type="button" aria-label="삭제">
+            <span class="card-task__delete-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="card-task__summary">
+          <span class="card-task__ai-icon" aria-hidden="true"></span>
+          <p class="card-task__summary-text">AI 요약 설명 또는 직접 입력한 내용입니다. 2줄 이상일 경우 말줄임표를 사용합니다.</p>
+        </div>
+      </div>
+      <div class="card-task__datebar">
+        <div class="card-task__dates">
+          <span class="card-task__date card-task__date--start">생성일 2026.01.02</span>
+          <span class="card-task__date card-task__date--end">마감일 2026.01.02</span>
+        </div>
+        <div class="card-task__update">
+          <span class="card-task__update-dot" aria-hidden="true"></span>
+          <span class="card-task__update-text">1분 전</span>
+        </div>
+      </div>
+      <div class="card-task__actionbar">
+        <div class="card-task__share">
+          <img class="card-task__share-avatar" src="/assets/avatar/female01.jpg" alt="">
+          <span class="card-task__share-count">+20</span>
+        </div>
+        <button class="card-task__btn card-task__btn--start" type="button">
+          <span class="card-task__btn-icon" aria-hidden="true"></span>
+          <span>MD버튼라벨</span>
+        </button>
+        <button class="card-task__btn card-task__btn--end" type="button">
+          <span class="card-task__btn-icon" aria-hidden="true"></span>
+          <span>MD버튼라벨</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="demo-caption">3) Accent 스타일 (제목/체크 테두리 초록색)</p>
+<div class="demo-list">
+  <div class="card-task"
+    data-style="accent"
+    data-complete="off"
+    data-show-datebar="true"
+    data-show-actionbar="true"
+    data-show-ai-icon="true"
+    data-show-startdate="true"
+    data-show-enddate="true"
+    data-show-update="true"
+    data-show-share="true"
+    data-show-startbutton="true"
+    data-show-endbutton="true">
+    <div class="card-task__block">
+      <div class="card-task__info">
+        <div class="card-task__title-row">
+          <button class="card-task__check" type="button" aria-label="완료 체크">
+            <span class="card-task__check-box"></span>
+          </button>
+          <span class="card-task__title">할 일 제목입니다. (1줄 이상일 경우 말줄임표 사용)</span>
+          <button class="card-task__delete" type="button" aria-label="삭제">
+            <span class="card-task__delete-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="card-task__summary">
+          <span class="card-task__ai-icon" aria-hidden="true"></span>
+          <p class="card-task__summary-text">AI 요약 설명 또는 직접 입력한 내용입니다. 2줄 이상일 경우 말줄임표를 사용합니다.</p>
+        </div>
+      </div>
+      <div class="card-task__datebar">
+        <div class="card-task__dates">
+          <span class="card-task__date card-task__date--start">생성일 2026.01.02</span>
+          <span class="card-task__date card-task__date--end">마감일 2026.01.02</span>
+        </div>
+        <div class="card-task__update">
+          <span class="card-task__update-dot" aria-hidden="true"></span>
+          <span class="card-task__update-text">1분 전</span>
+        </div>
+      </div>
+      <div class="card-task__actionbar">
+        <div class="card-task__share">
+          <img class="card-task__share-avatar" src="/assets/avatar/female01.jpg" alt="">
+          <span class="card-task__share-count">+20</span>
+        </div>
+        <button class="card-task__btn card-task__btn--start" type="button">
+          <span class="card-task__btn-icon" aria-hidden="true"></span>
+          <span>MD버튼라벨</span>
+        </button>
+        <button class="card-task__btn card-task__btn--end" type="button">
+          <span class="card-task__btn-icon" aria-hidden="true"></span>
+          <span>MD버튼라벨</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="demo-caption">4) Warning 스타일 (제목/체크 테두리 주황색)</p>
+<div class="demo-list">
+  <div class="card-task"
+    data-style="warning"
+    data-complete="off"
+    data-show-datebar="true"
+    data-show-actionbar="true"
+    data-show-ai-icon="true"
+    data-show-startdate="true"
+    data-show-enddate="true"
+    data-show-update="true"
+    data-show-share="true"
+    data-show-startbutton="true"
+    data-show-endbutton="true">
+    <div class="card-task__block">
+      <div class="card-task__info">
+        <div class="card-task__title-row">
+          <button class="card-task__check" type="button" aria-label="완료 체크">
+            <span class="card-task__check-box"></span>
+          </button>
+          <span class="card-task__title">할 일 제목입니다. (1줄 이상일 경우 말줄임표 사용)</span>
+          <button class="card-task__delete" type="button" aria-label="삭제">
+            <span class="card-task__delete-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="card-task__summary">
+          <span class="card-task__ai-icon" aria-hidden="true"></span>
+          <p class="card-task__summary-text">AI 요약 설명 또는 직접 입력한 내용입니다. 2줄 이상일 경우 말줄임표를 사용합니다.</p>
+        </div>
+      </div>
+      <div class="card-task__datebar">
+        <div class="card-task__dates">
+          <span class="card-task__date card-task__date--start">생성일 2026.01.02</span>
+          <span class="card-task__date card-task__date--end">마감일 2026.01.02</span>
+        </div>
+        <div class="card-task__update">
+          <span class="card-task__update-dot" aria-hidden="true"></span>
+          <span class="card-task__update-text">1분 전</span>
+        </div>
+      </div>
+      <div class="card-task__actionbar">
+        <div class="card-task__share">
+          <img class="card-task__share-avatar" src="/assets/avatar/female01.jpg" alt="">
+          <span class="card-task__share-count">+20</span>
+        </div>
+        <button class="card-task__btn card-task__btn--start" type="button">
+          <span class="card-task__btn-icon" aria-hidden="true"></span>
+          <span>MD버튼라벨</span>
+        </button>
+        <button class="card-task__btn card-task__btn--end" type="button">
+          <span class="card-task__btn-icon" aria-hidden="true"></span>
+          <span>MD버튼라벨</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="demo-caption">5) Danger 스타일 (제목/체크 테두리 빨간색)</p>
+<div class="demo-list">
+  <div class="card-task"
+    data-style="danger"
+    data-complete="off"
+    data-show-datebar="true"
+    data-show-actionbar="true"
+    data-show-ai-icon="true"
+    data-show-startdate="true"
+    data-show-enddate="true"
+    data-show-update="true"
+    data-show-share="true"
+    data-show-startbutton="true"
+    data-show-endbutton="true">
+    <div class="card-task__block">
+      <div class="card-task__info">
+        <div class="card-task__title-row">
+          <button class="card-task__check" type="button" aria-label="완료 체크">
+            <span class="card-task__check-box"></span>
+          </button>
+          <span class="card-task__title">할 일 제목입니다. (1줄 이상일 경우 말줄임표 사용)</span>
+          <button class="card-task__delete" type="button" aria-label="삭제">
+            <span class="card-task__delete-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="card-task__summary">
+          <span class="card-task__ai-icon" aria-hidden="true"></span>
+          <p class="card-task__summary-text">AI 요약 설명 또는 직접 입력한 내용입니다. 2줄 이상일 경우 말줄임표를 사용합니다.</p>
+        </div>
+      </div>
+      <div class="card-task__datebar">
+        <div class="card-task__dates">
+          <span class="card-task__date card-task__date--start">생성일 2026.01.02</span>
+          <span class="card-task__date card-task__date--end">마감일 2026.01.02</span>
+        </div>
+        <div class="card-task__update">
+          <span class="card-task__update-dot" aria-hidden="true"></span>
+          <span class="card-task__update-text">1분 전</span>
+        </div>
+      </div>
+      <div class="card-task__actionbar">
+        <div class="card-task__share">
+          <img class="card-task__share-avatar" src="/assets/avatar/female01.jpg" alt="">
+          <span class="card-task__share-count">+20</span>
+        </div>
+        <button class="card-task__btn card-task__btn--start" type="button">
+          <span class="card-task__btn-icon" aria-hidden="true"></span>
+          <span>MD버튼라벨</span>
+        </button>
+        <button class="card-task__btn card-task__btn--end" type="button">
+          <span class="card-task__btn-icon" aria-hidden="true"></span>
+          <span>MD버튼라벨</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="demo-caption">6) Complete = on (체크 + 취소선)</p>
+<div class="demo-list">
+  <div class="card-task"
+    data-complete="on"
+    data-show-datebar="true"
+    data-show-actionbar="true"
+    data-show-ai-icon="true"
+    data-show-startdate="true"
+    data-show-enddate="true"
+    data-show-update="false"
+    data-show-share="true"
+    data-show-startbutton="true"
+    data-show-endbutton="true">
+    <div class="card-task__block">
+      <div class="card-task__info">
+        <div class="card-task__title-row">
+          <button class="card-task__check" type="button" aria-label="완료 체크">
+            <span class="card-task__check-box"></span>
+          </button>
+          <span class="card-task__title">완료된 할 일 제목입니다.</span>
+          <button class="card-task__delete" type="button" aria-label="삭제">
+            <span class="card-task__delete-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="card-task__summary">
+          <span class="card-task__ai-icon" aria-hidden="true"></span>
+          <p class="card-task__summary-text">완료된 Task의 요약입니다.</p>
+        </div>
+      </div>
+      <div class="card-task__datebar">
+        <div class="card-task__dates">
+          <span class="card-task__date card-task__date--start">생성일 2026.01.02</span>
+          <span class="card-task__date card-task__date--end">마감일 2026.01.02</span>
+        </div>
+      </div>
+      <div class="card-task__actionbar">
+        <div class="card-task__share">
+          <img class="card-task__share-avatar" src="/assets/avatar/female01.jpg" alt="">
+          <span class="card-task__share-count">+20</span>
+        </div>
+        <button class="card-task__btn card-task__btn--start" type="button">
+          <span class="card-task__btn-icon" aria-hidden="true"></span>
+          <span>MD버튼라벨</span>
+        </button>
+        <button class="card-task__btn card-task__btn--end" type="button">
+          <span class="card-task__btn-icon" aria-hidden="true"></span>
+          <span>MD버튼라벨</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="demo-caption">7) ActionBar 숨김</p>
+<div class="demo-list">
+  <div class="card-task"
+    data-show-datebar="true"
+    data-show-actionbar="false"
+    data-show-ai-icon="true">
+    <div class="card-task__block">
+      <div class="card-task__info">
+        <div class="card-task__title-row">
+          <button class="card-task__check" type="button" aria-label="완료 체크">
+            <span class="card-task__check-box"></span>
+          </button>
+          <span class="card-task__title">ActionBar 없는 Task</span>
+          <button class="card-task__delete" type="button" aria-label="삭제">
+            <span class="card-task__delete-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="card-task__summary">
+          <span class="card-task__ai-icon" aria-hidden="true"></span>
+          <p class="card-task__summary-text">요약 텍스트입니다.</p>
+        </div>
+      </div>
+      <div class="card-task__datebar">
+        <div class="card-task__dates">
+          <span class="card-task__date card-task__date--start">생성일 2026.01.02</span>
+          <span class="card-task__date card-task__date--end">마감일 2026.01.02</span>
+        </div>
+        <div class="card-task__update">
+          <span class="card-task__update-dot" aria-hidden="true"></span>
+          <span class="card-task__update-text">1분 전</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="demo-caption">8) DateBar 숨김 + Summary 단일 라인</p>
+<div class="demo-list">
+  <div class="card-task"
+    data-show-datebar="false"
+    data-show-actionbar="true"
+    data-show-ai-icon="false"
+    data-summary-lines="single"
+    data-show-share="false"
+    data-show-startbutton="true"
+    data-show-endbutton="true">
+    <div class="card-task__block">
+      <div class="card-task__info">
+        <div class="card-task__title-row">
+          <button class="card-task__check" type="button" aria-label="완료 체크">
+            <span class="card-task__check-box"></span>
+          </button>
+          <span class="card-task__title">DateBar 없는 Task</span>
+          <button class="card-task__delete" type="button" aria-label="삭제">
+            <span class="card-task__delete-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="card-task__summary">
+          <span class="card-task__ai-icon" aria-hidden="true"></span>
+          <p class="card-task__summary-text">한 줄만 표시되는 요약 설명입니다. 길어지면 말줄임 처리됩니다.</p>
+        </div>
+      </div>
+      <div class="card-task__actionbar">
+        <div class="card-task__share">
+          <img class="card-task__share-avatar" src="/assets/avatar/female01.jpg" alt="">
+          <span class="card-task__share-count">+20</span>
+        </div>
+        <button class="card-task__btn card-task__btn--start" type="button">
+          <span class="card-task__btn-icon" aria-hidden="true"></span>
+          <span>MD버튼라벨</span>
+        </button>
+        <button class="card-task__btn card-task__btn--end" type="button">
+          <span class="card-task__btn-icon" aria-hidden="true"></span>
+          <span>MD버튼라벨</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

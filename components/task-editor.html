@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Task Editor - Posco Nextep</title>
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/components/task-editor.css">
+</head>
+<body>
+
+<div class="task-editor">
+
+  <!-- Header -->
+  <div class="task-editor__header">
+
+    <!-- Title -->
+    <div class="task-editor__title-row">
+      <img class="task-editor__title-icon" src="/assets/icons/IconAI-3Star-Color.svg" alt="AI">
+      <h2 class="task-editor__title">고망간강 관련 고객사 동향 자료 수집 및 보고서 작성</h2>
+    </div>
+
+    <!-- Meta -->
+    <div class="task-editor__meta">
+
+      <!-- 기간 -->
+      <div class="task-editor__meta-row">
+        <div class="task-editor__meta-label">
+          <div class="task-editor__meta-label-icon">
+            <span style="--icon: url('/assets/icons/BiTimeFive.svg')"></span>
+          </div>
+          <span class="task-editor__meta-label-text">기간</span>
+        </div>
+        <div class="task-editor__meta-value">
+          <div class="task-editor__date-range">
+            <span class="task-editor__date-value">
+              2026.02.15
+              <span class="task-editor__date-icon" style="--icon: url('/assets/icons/BiCalendarPlus.svg')"></span>
+            </span>
+            <span class="task-editor__date-sep">~</span>
+            <span class="task-editor__date-value">
+              2026.02.28
+              <span class="task-editor__date-icon" style="--icon: url('/assets/icons/BiCalendarPlus.svg')"></span>
+            </span>
+          </div>
+          <span class="task-editor__badge task-editor__badge--accent">마감 5일전</span>
+        </div>
+      </div>
+
+      <!-- 생성 -->
+      <div class="task-editor__meta-row">
+        <div class="task-editor__meta-label">
+          <div class="task-editor__meta-label-icon">
+            <span style="--icon: url('/assets/icons/IconUser.svg')"></span>
+          </div>
+          <span class="task-editor__meta-label-text">생성</span>
+        </div>
+        <span class="task-editor__badge task-editor__badge--thirdly">김길동 (과장 / 에너지 솔루션 개발팀)</span>
+      </div>
+
+      <!-- 공유 -->
+      <div class="task-editor__meta-row">
+        <div class="task-editor__meta-label">
+          <div class="task-editor__meta-label-icon">
+            <span style="--icon: url('/assets/icons/BiShareAlt.svg')"></span>
+          </div>
+          <span class="task-editor__meta-label-text">공유</span>
+        </div>
+        <div class="task-editor__share-list">
+          <span class="task-editor__badge task-editor__badge--thirdly-icon">
+            김일도
+            <span class="task-editor__badge-icon" style="--icon: url('/assets/icons/BiCog.svg')"></span>
+          </span>
+          <span class="task-editor__badge task-editor__badge--thirdly-icon">
+            김일도
+            <span class="task-editor__badge-icon" style="--icon: url('/assets/icons/BiCog.svg')"></span>
+          </span>
+          <span class="task-editor__badge task-editor__badge--thirdly-icon">
+            김일도
+            <span class="task-editor__badge-icon" style="--icon: url('/assets/icons/BiCog.svg')"></span>
+          </span>
+          <span class="task-editor__badge task-editor__badge--thirdly-icon">
+            김일도
+            <span class="task-editor__badge-icon" style="--icon: url('/assets/icons/BiCog.svg')"></span>
+          </span>
+          <span class="task-editor__badge task-editor__badge--thirdly-icon">
+            김일도
+            <span class="task-editor__badge-icon" style="--icon: url('/assets/icons/BiCog.svg')"></span>
+          </span>
+          <button type="button" class="task-editor__add-btn" aria-label="공유 추가">
+            <span class="task-editor__add-btn-icon"></span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="task-editor__divider"></div>
+
+  <!-- Content -->
+  <div class="task-editor__content">
+
+    <!-- Card List -->
+    <div class="task-editor__card-list">
+
+      <div class="task-editor__card">
+        <div class="task-editor__card-header">
+          <div class="task-editor__card-avatar">
+            <span class="task-editor__card-avatar-icon"></span>
+          </div>
+          <button type="button" class="task-editor__card-more" aria-label="더보기">
+            <span class="task-editor__card-more-icon"></span>
+          </button>
+        </div>
+        <p class="task-editor__card-title">최근 팀 내에서 논의되었던 '고망간강' 관련 고객사 동향 자료가 도착했습니다.</p>
+        <span class="task-editor__card-date">김길동 / 2026.02.20. 10.20.34</span>
+        <div class="task-editor__card-desc">
+          <img class="task-editor__card-desc-icon" src="/assets/icons/IconAI-2Star-Color.svg" alt="">
+          <p class="task-editor__card-desc-text">가나다라마바사아자차카타파하 가나다라마바사아자차카타파하</p>
+        </div>
+      </div>
+
+      <div class="task-editor__card">
+        <div class="task-editor__card-header">
+          <div class="task-editor__card-avatar">
+            <span class="task-editor__card-avatar-icon"></span>
+          </div>
+          <button type="button" class="task-editor__card-more" aria-label="더보기">
+            <span class="task-editor__card-more-icon"></span>
+          </button>
+        </div>
+        <p class="task-editor__card-title">최근 팀 내에서 논의되었던 '고망간강' 관련 고객사 동향 자료가 도착했습니다.</p>
+        <span class="task-editor__card-date">김길동 / 2026.02.20. 10.20.34</span>
+        <div class="task-editor__card-desc">
+          <img class="task-editor__card-desc-icon" src="/assets/icons/IconAI-2Star-Color.svg" alt="">
+          <p class="task-editor__card-desc-text">가나다라마바사아자차카타파하 가나다라마바사아자차카타파하</p>
+        </div>
+      </div>
+
+      <div class="task-editor__card">
+        <div class="task-editor__card-header">
+          <div class="task-editor__card-avatar">
+            <span class="task-editor__card-avatar-icon"></span>
+          </div>
+          <button type="button" class="task-editor__card-more" aria-label="더보기">
+            <span class="task-editor__card-more-icon"></span>
+          </button>
+        </div>
+        <p class="task-editor__card-title">최근 팀 내에서 논의되었던 '고망간강' 관련 고객사 동향 자료가 도착했습니다.</p>
+        <span class="task-editor__card-date">김길동 / 2026.02.20. 10.20.34</span>
+        <div class="task-editor__card-desc">
+          <img class="task-editor__card-desc-icon" src="/assets/icons/IconAI-2Star-Color.svg" alt="">
+          <p class="task-editor__card-desc-text">가나다라마바사아자차카타파하 가나다라마바사아자차카타파하</p>
+        </div>
+      </div>
+
+      <div class="task-editor__card">
+        <div class="task-editor__card-header">
+          <div class="task-editor__card-avatar">
+            <span class="task-editor__card-avatar-icon"></span>
+          </div>
+          <button type="button" class="task-editor__card-more" aria-label="더보기">
+            <span class="task-editor__card-more-icon"></span>
+          </button>
+        </div>
+        <p class="task-editor__card-title">최근 팀 내에서 논의되었던 '고망간강' 관련 고객사 동향 자료가 도착했습니다.</p>
+        <span class="task-editor__card-date">김길동 / 2026.02.20. 10.20.34</span>
+        <div class="task-editor__card-desc">
+          <img class="task-editor__card-desc-icon" src="/assets/icons/IconAI-2Star-Color.svg" alt="">
+          <p class="task-editor__card-desc-text">가나다라마바사아자차카타파하 가나다라마바사아자차카타파하</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- AI Suggestion -->
+    <div class="task-editor__ai-suggest">
+      <div class="task-editor__ai-suggest-heading">
+        <img class="task-editor__ai-suggest-icon" src="/assets/icons/IconAI-2Star-Color.svg" alt="AI">
+        <h6 class="task-editor__ai-suggest-title">최근 자주 프로젝트로 수행하셨던 '고망간강' 관련 한화 오션 LNG선 수주 관련 영업 기회가 발생했습니다. 해야 할 일을 확인해 보세요.</h6>
+      </div>
+      <ol class="task-editor__ai-suggest-list">
+        <li>미팅 가능 일자 차주 화, 수, 목 15:00 ~ 17:00로 회신</li>
+        <li>미팅 전 고망간강 관련 설명 자료 첨부 요청</li>
+        <li>고망간강 관련 인증 현황 요청</li>
+      </ol>
+    </div>
+
+  </div>
+
+  <!-- Editor Body -->
+  <div class="task-editor__body">
+    <h4 class="task-editor__body-title">Heading H4</h4>
+    <div class="task-editor__body-list">
+      <div class="task-editor__body-item">
+        <span class="task-editor__body-bullet"></span>
+        <span class="task-editor__body-item-text">내용을 입력하세요.</span>
+      </div>
+      <div class="task-editor__body-item">
+        <span class="task-editor__body-bullet"></span>
+        <span class="task-editor__body-item-text">내용을 입력하세요.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- File Blocks -->
+  <div class="task-editor__files">
+    <div class="task-editor__file">
+      <div class="task-editor__file-name">
+        <img class="task-editor__file-icon" src="/assets/icons/IconFilePPT.svg" alt="">
+        <span class="task-editor__file-name-text">파일명_20260101.pptx</span>
+      </div>
+      <div class="task-editor__file-meta">
+        <span class="task-editor__file-size">2345KB</span>
+        <span class="task-editor__file-more"></span>
+      </div>
+    </div>
+    <div class="task-editor__file">
+      <div class="task-editor__file-name">
+        <img class="task-editor__file-icon" src="/assets/icons/IconFilePPT.svg" alt="">
+        <span class="task-editor__file-name-text">파일명_20260101.pptx</span>
+      </div>
+      <div class="task-editor__file-meta">
+        <span class="task-editor__file-size">2345KB</span>
+        <span class="task-editor__file-more"></span>
+      </div>
+    </div>
+    <div class="task-editor__file">
+      <div class="task-editor__file-name">
+        <img class="task-editor__file-icon" src="/assets/icons/IconFilePPT.svg" alt="">
+        <span class="task-editor__file-name-text">파일명_20260101.pptx</span>
+      </div>
+      <div class="task-editor__file-meta">
+        <span class="task-editor__file-size">2345KB</span>
+        <span class="task-editor__file-more"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Callout -->
+  <div class="task-editor__callout">
+    <img class="task-editor__callout-icon" src="/assets/icons/FcIdea.svg" alt="">
+    <span class="task-editor__callout-text">Write something or '/' for commands.</span>
+  </div>
+
+  <!-- Table -->
+  <table class="task-editor__table">
+    <thead>
+      <tr>
+        <th class="task-editor__table-th task-editor__table-th--number"></th>
+        <th class="task-editor__table-th">헤더라벨</th>
+        <th class="task-editor__table-th">헤더라벨</th>
+        <th class="task-editor__table-th">헤더라벨</th>
+        <th class="task-editor__table-th">헤더라벨</th>
+        <th class="task-editor__table-th">헤더라벨</th>
+        <th class="task-editor__table-th">헤더라벨</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="task-editor__table-td task-editor__table-td--center">1</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+      </tr>
+      <tr>
+        <td class="task-editor__table-td task-editor__table-td--center">2</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+      </tr>
+      <tr>
+        <td class="task-editor__table-td task-editor__table-td--center">3</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+      </tr>
+      <tr>
+        <td class="task-editor__table-td task-editor__table-td--center">4</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+      </tr>
+      <tr>
+        <td class="task-editor__table-td task-editor__table-td--center">5</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+        <td class="task-editor__table-td">셀라벨</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+@import './card-task.css';
+
+/* ==========================================================================
+   Task Hub (left-panel header)
+   ========================================================================== */
+
+.task-hub {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #D5D8E4;
+}
+
+.task-hub__heading {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.task-hub__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #333333;
+}
+
+.count-badge {
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 7px;
+  border-radius: 1000px;
+  background: #F22625;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.count-badge::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 14px;
+  background-color: #F22625;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8.07105 14.1455' fill='black'><path d='M0 1.00195C0 0.111043 1.07707 -0.335048 1.70703 0.294917L7.77832 6.36523C8.16874 6.75565 8.16852 7.38874 7.77832 7.77929L1.70703 13.8506C1.07707 14.4805 0 14.0345 0 13.1435V1.00195Z'/></svg>") no-repeat center / contain;
+          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8.07105 14.1455' fill='black'><path d='M0 1.00195C0 0.111043 1.07707 -0.335048 1.70703 0.294917L7.77832 6.36523C8.16874 6.75565 8.16852 7.38874 7.77832 7.77929L1.70703 13.8506C1.07707 14.4805 0 14.0345 0 13.1435V1.00195Z'/></svg>") no-repeat center / contain;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.task-hub__actions {
+  display: flex;
+  align-items: center;
+}
+
+.action-icon {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 1000px;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-icon__icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #959BB0;
+  -webkit-mask: var(--icon) no-repeat center / contain;
+          mask: var(--icon) no-repeat center / contain;
+}
+
+.action-icon[data-icon="search"] .action-icon__icon { --icon: url('/assets/icons/IconSearch.svg'); }
+.action-icon[data-icon="filter"] .action-icon__icon { --icon: url('/assets/icons/BiFilterAlt.svg'); }
+.action-icon[data-icon="more"]   .action-icon__icon { --icon: url('/assets/icons/ico-more-ver.svg'); }
+
+/* ==========================================================================
+   Task Register (새 Task 등록 section)
+   ========================================================================== */
+
+.task-register {
+  box-sizing: border-box;
+  padding: 20px;
+  border-bottom: 1px solid #D5D8E4;
+}
+
+.task-register__button {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  min-width: 96px;
+  height: 48px;
+  padding: 0 16px 0 20px;
+  border: 0;
+  border-radius: 1000px;
+  background: #4E66FF;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 125%;
+  cursor: pointer;
+}
+
+.task-register__button:hover {
+  background: #4757F1;
+}
+
+.task-register__button:active {
+  background: #3F47E3;
+}
+
+.task-register__icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: #FFFFFF;
+  -webkit-mask: url('/assets/icons/BiPlus.svg') no-repeat center / contain;
+          mask: url('/assets/icons/BiPlus.svg') no-repeat center / contain;
+}
+
+/* ==========================================================================
+   Task List (scrollable card list)
+   ========================================================================== */
+
+.task-list {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+}

@@ -1,0 +1,366 @@
+/* ==========================================================================
+   P-GPT Chat Component
+   ========================================================================== */
+
+.p-gpt {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 100vh;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ---------- Header ---------- */
+
+.p-gpt__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  height: 48px;
+  padding: 0 16px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.p-gpt__logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.p-gpt__logo-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.p-gpt__logo-text {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25em;
+  color: #5968EB;
+}
+
+.p-gpt__header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.p-gpt__header-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.p-gpt__header-btn-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #3B4154;
+  -webkit-mask: var(--icon) no-repeat center / contain;
+          mask: var(--icon) no-repeat center / contain;
+}
+
+.p-gpt__header-btn[data-action="history"]  .p-gpt__header-btn-icon { --icon: url('../../assets/icons/ico-history.svg'); }
+.p-gpt__header-btn[data-action="edit"]     .p-gpt__header-btn-icon { --icon: url('../../assets/icons/BiEdit.svg'); }
+.p-gpt__header-btn[data-action="export"]   .p-gpt__header-btn-icon { --icon: url('../../assets/icons/IconExport.svg'); }
+.p-gpt__header-btn[data-action="close"]    .p-gpt__header-btn-icon { --icon: url('../../assets/icons/IconX.svg'); }
+
+/* ---------- Chat Area ---------- */
+
+.p-gpt__chat {
+  flex: 1 1 0;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  padding: 16px;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #D3D6E3 transparent;
+}
+
+.p-gpt__chat::-webkit-scrollbar {
+  width: 4px;
+}
+
+.p-gpt__chat::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.p-gpt__chat::-webkit-scrollbar-thumb {
+  background: #D3D6E3;
+  border-radius: 4px;
+}
+
+/* ---------- AI Message Block ---------- */
+
+.p-gpt__ai-block {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
+}
+
+.p-gpt__ai-block-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5em;
+  color: #3B4154;
+}
+
+.p-gpt__ai-block-desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #3B4154;
+}
+
+.p-gpt__divider {
+  width: 100%;
+  height: 1px;
+  background: #E3E6F1;
+  border: 0;
+  margin: 0;
+}
+
+/* ---------- AI Message Text ---------- */
+
+.p-gpt__ai-text {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #3B4154;
+  width: 100%;
+}
+
+/* ---------- AI Follow-up Questions ---------- */
+
+.p-gpt__ai-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.p-gpt__ai-questions p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #3B4154;
+}
+
+/* ---------- AI Section (titled) ---------- */
+
+.p-gpt__ai-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.p-gpt__ai-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5em;
+  color: #3B4154;
+}
+
+.p-gpt__ai-section-desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #3B4154;
+}
+
+.p-gpt__ai-section-bullet {
+  display: flex;
+  gap: 4px;
+}
+
+.p-gpt__ai-section-bullet-dot {
+  flex-shrink: 0;
+}
+
+/* ---------- AI Action Bar ---------- */
+
+.p-gpt__ai-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+}
+
+.p-gpt__ai-action-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.p-gpt__ai-action-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #808596;
+  -webkit-mask: var(--icon) no-repeat center / contain;
+          mask: var(--icon) no-repeat center / contain;
+}
+
+.p-gpt__ai-action-btn[data-action="copy"]         .p-gpt__ai-action-icon { --icon: url('../../assets/icons/IconCopy.svg'); }
+.p-gpt__ai-action-btn[data-action="upload"]       .p-gpt__ai-action-icon { --icon: url('../../assets/icons/ico-Upload.svg'); }
+.p-gpt__ai-action-btn[data-action="more"]         .p-gpt__ai-action-icon { --icon: url('../../assets/icons/ico-more-hoz.svg'); }
+.p-gpt__ai-action-btn[data-action="spreadsheet"]  .p-gpt__ai-action-icon { --icon: url('../../assets/icons/BiSpreadsheet.svg'); }
+
+/* ---------- User Message ---------- */
+
+.p-gpt__user-msg {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  padding: 8px 16px;
+  background: #EDEFF5;
+  border-radius: 16px 0 16px 16px;
+  box-sizing: border-box;
+}
+
+.p-gpt__user-msg p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #242837;
+  text-align: right;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+/* ---------- Footer / Input ---------- */
+
+.p-gpt__footer {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.p-gpt__input-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 16px;
+  background: #EDEFF5;
+  border-radius: 24px;
+  box-sizing: border-box;
+}
+
+.p-gpt__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: 0;
+  background: none;
+  outline: none;
+  resize: none;
+  overflow-y: auto;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 21px;
+  max-height: 105px;
+  color: #3B4154;
+  font-family: inherit;
+  scrollbar-width: thin;
+  scrollbar-color: #C0C3CE transparent;
+}
+
+.p-gpt__input::-webkit-scrollbar {
+  width: 4px;
+}
+
+.p-gpt__input::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.p-gpt__input::-webkit-scrollbar-thumb {
+  background: #C0C3CE;
+  border-radius: 4px;
+}
+
+.p-gpt__input::placeholder {
+  color: #696E80;
+}
+
+.p-gpt__input-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.p-gpt__input-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.p-gpt__input-btn-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #242837;
+  -webkit-mask: var(--icon) no-repeat center / contain;
+          mask: var(--icon) no-repeat center / contain;
+}
+
+.p-gpt__input-btn[data-action="link"] .p-gpt__input-btn-icon { --icon: url('../../assets/icons/BiLinkAlt.svg'); }
+.p-gpt__input-btn[data-action="grid"] .p-gpt__input-btn-icon { --icon: url('../../assets/icons/BiGridAlt.svg'); }
+
+/* ---------- User Message (short variant) ---------- */
+
+.p-gpt__user-msg--short {
+  width: auto;
+  max-width: 300px;
+  min-height: 40px;
+  height: auto;
+  border-radius: 20px 0 20px 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1600px) {
+  .p-gpt {
+    width: 320px;
+  }
+}
