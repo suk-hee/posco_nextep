@@ -97,8 +97,8 @@
   width: 16px;
   height: 16px;
   background-color: rgba(0, 0, 0, 0.2);
-  -webkit-mask: url('/assets/icons/IconX.svg') no-repeat center / contain;
-          mask: url('/assets/icons/IconX.svg') no-repeat center / contain;
+  -webkit-mask: url('../../assets/icons/IconX.svg') no-repeat center / contain;
+          mask: url('../../assets/icons/IconX.svg') no-repeat center / contain;
 }
 
 .card-task__summary {
@@ -121,7 +121,7 @@
   display: block;
   width: 16px;
   height: 16px;
-  background: url('/assets/icons/IconAI-2Star-Color.svg') no-repeat center / contain;
+  background: url('../../assets/icons/IconAI-2Star-Color.svg') no-repeat center / contain;
 }
 
 .card-task__summary-text {
@@ -247,8 +247,8 @@
   width: 16px;
   height: 16px;
   background-color: #343B52;
-  -webkit-mask: url('/assets/icons/BiCog.svg') no-repeat center / contain;
-          mask: url('/assets/icons/BiCog.svg') no-repeat center / contain;
+  -webkit-mask: url('../../assets/icons/BiCog.svg') no-repeat center / contain;
+          mask: url('../../assets/icons/BiCog.svg') no-repeat center / contain;
 }
 
 /* ---------- Option toggles ---------- */

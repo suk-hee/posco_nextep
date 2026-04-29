@@ -140,7 +140,7 @@ const TASK_LIST_DATA = [
     summary: '01.19. (월) 고객사 미팅 회의록에서 김일도 리더님께 보낼 보고서 초안을 작성했습니다.',
     startDate: '생성일 2026.01.02',
     endDate: '마감일 2026.01.02 11:00',
-    share: { avatar: '../assets/avatar/female01.jpg', count: '+20' },
+    share: { avatar: './assets/avatar/female01.jpg', count: '+20' },
     startButton: '미팅 회의록 확인',
     endButton: '보고서 초안 작성',
   },
@@ -176,7 +176,7 @@ let P_GPT_HTML = '';
 P_GPT_HTML += `<div class="p-gpt">`;
 P_GPT_HTML +=   `<header class="p-gpt__header">`;
 P_GPT_HTML +=     `<div class="p-gpt__logo">`;
-P_GPT_HTML +=       `<img class="p-gpt__logo-icon" src="../assets/icons/IconAI-3Star-Color.svg" alt="AI">`;
+P_GPT_HTML +=       `<img class="p-gpt__logo-icon" src="./assets/icons/IconAI-3Star-Color.svg" alt="AI">`;
 P_GPT_HTML +=       `<span class="p-gpt__logo-text">P-GPT</span>`;
 P_GPT_HTML +=     `</div>`;
 P_GPT_HTML +=     `<div class="p-gpt__header-actions">`;
