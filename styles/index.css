@@ -328,8 +328,8 @@
 }
 
 .today-plan__timeline {
-  --hour-edge: 118px;
-  --hour-flex: calc((100% - (var(--hour-edge) * 2)) / 9);
+  --hour-flex: calc(100% / 11);
+  --hour-edge: var(--hour-flex);
   position: relative;
   display: flex;
   width: 100%;
@@ -344,7 +344,7 @@
 }
 
 .today-plan__hour--edge {
-  flex: 0 0 var(--hour-edge);
+  flex: 1 1 0;
 }
 
 .today-plan__hour-slot {
