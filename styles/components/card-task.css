@@ -97,8 +97,8 @@
   width: 16px;
   height: 16px;
   background-color: rgba(0, 0, 0, 0.2);
-  -webkit-mask: url('../../assets/icons/IconX.svg') no-repeat center / contain;
-          mask: url('../../assets/icons/IconX.svg') no-repeat center / contain;
+  -webkit-mask: url('/assets/icons/IconX.svg') no-repeat center / contain;
+          mask: url('/assets/icons/IconX.svg') no-repeat center / contain;
 }
 
 .card-task__summary {
@@ -121,7 +121,7 @@
   display: block;
   width: 16px;
   height: 16px;
-  background: url('../../assets/icons/IconAI-2Star-Color.svg') no-repeat center / contain;
+  background: url('/assets/icons/IconAI-2Star-Color.svg') no-repeat center / contain;
 }
 
 .card-task__summary-text {
@@ -238,7 +238,6 @@
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
-  line-height: 125%;
   color: #343B52;
 }
 
@@ -247,8 +246,45 @@
   width: 16px;
   height: 16px;
   background-color: #343B52;
-  -webkit-mask: url('../../assets/icons/BiCog.svg') no-repeat center / contain;
-          mask: url('../../assets/icons/BiCog.svg') no-repeat center / contain;
+  -webkit-mask: url('/assets/icons/BiCog.svg') no-repeat center / contain;
+          mask: url('/assets/icons/BiCog.svg') no-repeat center / contain;
+}
+
+.card-task__btn-icon[data-icon="envelope"] {
+  -webkit-mask-image: url('/assets/icons/BiEnvelope.svg');
+          mask-image: url('/assets/icons/BiEnvelope.svg');
+}
+
+.card-task__btn-icon[data-icon="folder"] {
+  -webkit-mask-image: url('/assets/icons/BiFolderOpen.svg');
+          mask-image: url('/assets/icons/BiFolderOpen.svg');
+}
+
+.card-task__btn-icon[data-icon="arrow-up-right"] {
+  -webkit-mask-image: url('/assets/icons/FiArrowUpRight.svg');
+          mask-image: url('/assets/icons/FiArrowUpRight.svg');
+}
+
+/* AI 그라디언트 아이콘 — 색상 보존을 위해 mask 대신 background-image 사용 */
+.card-task__btn-icon[data-icon="ai-star"] {
+  background: url('/assets/icons/IconAIStar1.svg') no-repeat center / contain;
+  -webkit-mask: none;
+          mask: none;
+}
+
+/* 아이콘 위치: 오른쪽 (라벨 → 아이콘 순) */
+.card-task__btn[data-icon-pos="right"] {
+  flex-direction: row-reverse;
+  padding: 0 10px 0 14px;
+}
+
+/* AI 버튼 변형 (그라디언트 보더 + 인디고 텍스트) */
+.card-task__btn[data-variant="ai"] {
+  border-color: transparent;
+  background:
+    linear-gradient(#FFFFFF, #FFFFFF) padding-box,
+    linear-gradient(to right, #58CDFF 20%, #7057FF 80%) border-box;
+  color: #4757F1;
 }
 
 /* ---------- Option toggles ---------- */
